@@ -1,0 +1,55 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Player/Soul.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Buttons/ButtonScene.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Battle Assets/battlebox.png" type="Texture" id=4]
+[ext_resource path="res://Music/mus_heartache.ogg" type="AudioStream" id=6]
+[ext_resource path="res://World.gd" type="Script" id=7]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 5.85413, 10.2781 )
+
+[node name="World" type="Node2D"]
+position = Vector2( 52.1055, 10.6842 )
+script = ExtResource( 7 )
+
+[node name="BattleBox" type="KinematicBody2D" parent="."]
+visible = false
+position = Vector2( 301.191, 296.93 )
+scale = Vector2( 0.38175, 0.430125 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Left" type="CollisionShape2D" parent="BattleBox"]
+position = Vector2( -310.857, 0.081 )
+scale = Vector2( 1, 21.9 )
+shape = SubResource( 1 )
+
+[node name="Right" type="CollisionShape2D" parent="BattleBox"]
+position = Vector2( 310.855, 0.116028 )
+scale = Vector2( 1, 21.9 )
+shape = SubResource( 1 )
+
+[node name="Up" type="CollisionShape2D" parent="BattleBox"]
+position = Vector2( 1.338, -230.909 )
+rotation = 1.5708
+scale = Vector2( 1, 30 )
+shape = SubResource( 1 )
+
+[node name="Down" type="CollisionShape2D" parent="BattleBox"]
+position = Vector2( 1.338, 230.854 )
+rotation = 1.5708
+scale = Vector2( 1, 30 )
+shape = SubResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="BattleBox"]
+texture = ExtResource( 4 )
+
+[node name="BattleMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 6 )
+
+[node name="Buttons" parent="." instance=ExtResource( 2 )]
+position = Vector2( 36.369, 440 )
+
+[node name="Soul" parent="." instance=ExtResource( 1 )]

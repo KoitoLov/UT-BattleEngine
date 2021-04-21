@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/snd_select.wav-1ae0b7735112d7041392c4adb1deff88.sample"
+
+[deps]
+
+source_file="res://Music/snd_select.wav"
+dest_files=[ "res://.import/snd_select.wav-1ae0b7735112d7041392c4adb1deff88.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

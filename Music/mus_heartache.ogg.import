@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/mus_heartache.ogg-c89ea8525e3091f62bbf5af095f112aa.oggstr"
+
+[deps]
+
+source_file="res://Music/mus_heartache.ogg"
+dest_files=[ "res://.import/mus_heartache.ogg-c89ea8525e3091f62bbf5af095f112aa.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

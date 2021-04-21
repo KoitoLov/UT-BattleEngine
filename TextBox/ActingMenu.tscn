@@ -1,0 +1,104 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://TextBox/spr_TextBox.png" type="Texture" id=1]
+[ext_resource path="res://TextBox/determinationmonoweb-webfont.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://TextBox/ActingMenu.gd" type="Script" id=3]
+[ext_resource path="res://Player/Soul.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Music/snd_focused.wav" type="AudioStream" id=5]
+[ext_resource path="res://Music/snd_select.wav" type="AudioStream" id=6]
+
+[sub_resource type="DynamicFont" id=1]
+size = 32
+font_data = ExtResource( 2 )
+
+[node name="ActingMenu" type="Node2D"]
+script = ExtResource( 3 )
+
+[node name="Soul" parent="." instance=ExtResource( 4 )]
+visible = false
+
+[node name="Text Box" type="Control" parent="."]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -288.0
+margin_top = -160.0
+margin_right = 288.0
+margin_bottom = -24.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="Text Box"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -1.0
+margin_bottom = 2.0
+texture = ExtResource( 1 )
+expand = true
+stretch_mode = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Option 1" type="Label" parent="Text Box"]
+margin_left = 70.0
+margin_top = 20.0
+margin_right = 230.0
+margin_bottom = 53.0
+custom_fonts/font = SubResource( 1 )
+text = "* Pie"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Option 2" type="Label" parent="Text Box"]
+margin_left = 325.0
+margin_top = 20.0
+margin_right = 485.0
+margin_bottom = 53.0
+custom_fonts/font = SubResource( 1 )
+text = "* SnowPiece"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Option 3" type="Label" parent="Text Box"]
+margin_left = 325.0
+margin_top = 55.0
+margin_right = 485.0
+margin_bottom = 88.0
+custom_fonts/font = SubResource( 1 )
+text = "* Steak"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Option 4" type="Label" parent="Text Box"]
+margin_left = 70.0
+margin_top = 55.0
+margin_right = 230.0
+margin_bottom = 88.0
+custom_fonts/font = SubResource( 1 )
+text = "* I.Noodles"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PAGE" type="Label" parent="Text Box"]
+margin_left = 325.0
+margin_top = 90.0
+margin_right = 501.0
+margin_bottom = 123.0
+custom_fonts/font = SubResource( 1 )
+text = "  PAGE 1"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Focused" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 5 )
+
+[node name="Select" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 6 )
